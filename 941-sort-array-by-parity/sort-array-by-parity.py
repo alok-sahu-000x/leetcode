@@ -1,7 +1,7 @@
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
         n=len(nums)
-        temp=0
+        '''temp=0
         start=0
         for i in range(n):
             if nums[i]%2==0:
@@ -12,7 +12,20 @@ class Solution:
                 # nums[start]=nums[i]
                 start+=1
 
-        return nums
+        return nums'''
+
+        def checkparity(i):
+            return i&1
+        ans=[]
+        etc=[]
+        for i in nums:
+            if not checkparity(i):
+                ans.append(i)
+            else:
+                etc.append(i)
+        ans.extend(etc)
+        return ans
+
 
             
                 
