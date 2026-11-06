@@ -5,11 +5,11 @@ class Solution:
         return "".join(s1)
     def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         dict1={}
-        for s in strs:
-            key=self.sortString(s)
+        for i in strs:
+            key=self.sortString(i)
             if key in dict1:
-                dict1[key].append(s)
+                dict1[key].append(i)
             else:
-                dict1[key]=[s]
+                dict1[key]=[i]
         return list(dict1.values())
         
